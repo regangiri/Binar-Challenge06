@@ -7,6 +7,10 @@ import { useSelector } from "react-redux";
 const NavbarAdmin = () => {
   const { dataLogin } = useSelector((store) => store.authReducer);
 
+  const logoutAdmin = () => {
+    sessionStorage.removeItem("token");
+  };
+
   return (
     <>
       <section id="content w-100">
@@ -33,6 +37,7 @@ const NavbarAdmin = () => {
                   <Image src="images/img_profile.svg" alt="profile picture" />
                 </Link>
                 <p class="mx-3 my-auto">Unis Badri</p>
+                <button onClick={logoutAdmin}>logout</button>
                 <Link to="#">
                   <Image src="images/icon_arrdown.svg" alt="" />
                 </Link>

@@ -23,3 +23,10 @@ export const logOut = () => {
     dispatch({ type: "SET_DATA_LOGOUT" });
   };
 };
+
+export const setToken = () => {
+  const token = sessionStorage.getItem("token");
+  return (dispatch) => {
+    dispatch({ type: "SET_TOKEN", payload: { token } });
+  };
+};

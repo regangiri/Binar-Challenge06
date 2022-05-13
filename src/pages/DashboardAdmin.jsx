@@ -1,21 +1,23 @@
-import SidebarAdmin from '../components/SidebarAdmin';
-import {useSelector} from 'react-redux';
-import {useEffect} from 'react';
-import {useNavigate} from 'react-router-dom';
+import SidebarAdmin from "../components/SidebarAdmin";
+import { useDispatch, useSelector } from "react-redux";
+import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { setToken } from "../config/redux/actions/authAction";
 
 const DashboardAdmin = () => {
-    const navigate = useNavigate();
-    const {dataLogin} = useSelector((state) => state.authReducer);
+  const dispatch = useDispatch();
 
-    useEffect(() => {
-        if(dataLogin?.email !== "admin@admin.com") navigate("/");
-        //eslint-disable-next-line
-    },[])
+  const navigate = useNavigate();
+  const { dataLogin } = useSelector((state) => state.authReducer);
 
-    return(
-        <>
-        <SidebarAdmin/>
-        </>
-    )
-}
+  useEffect(() => {
+    if (sessionStorage.getItem("token") == null) navigate("/");
+  }, []);
+
+  return (
+    <>
+      <SidebarAdmin />
+    </>
+  );
+};
 export default DashboardAdmin;

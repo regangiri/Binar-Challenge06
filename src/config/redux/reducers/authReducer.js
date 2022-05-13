@@ -1,5 +1,6 @@
 const initialState = {
   dataLogin: null,
+  token: "",
 };
 
 const authReducer = (state = initialState, action) => {
@@ -13,6 +14,10 @@ const authReducer = (state = initialState, action) => {
     case "SET_DATA_LOGOUT":
       return {
         dataLogin: null,
+      };
+    case "SET_TOKEN":
+      return {
+        token: action.payload,
       };
     default:
       return state;
