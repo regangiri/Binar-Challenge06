@@ -16,14 +16,10 @@ const Register = () => {
   const { dataLogin } = useSelector((state) => state.authReducer);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  // const {dataLogin} = useSelector((store) => store.authReducer);
-  // console.log(dataLogin);
-  // const dataUsers = dataLogin.user;
-  // console.log(dataUsers);
 
   const handleLoginGoogle = async () => {
     const data = await dispatch(LoginGoogle());
-    if (data) navigate("/home"); //di return di bagian actionnya
+    if (data) navigate("/home");
   };
 
   const handleRegister = () => {

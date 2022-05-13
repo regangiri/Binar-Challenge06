@@ -1,20 +1,30 @@
-.nav-icon{
-    width:70px;
-    height:902px; 
-    background-color:#0D28A6;   
+.nav-icon {
+  width: 70px;
+  height: 902px;
+  background-color: #0d28a6;
 }
-.icon-sidebar{
-    width:34px; 
-    height:34px; 
-    background-color:#CFD4ED;
+.icon-sidebar {
+  width: 34px;
+  height: 34px;
+  background-color: #cfd4ed;
 }
-.text-icon-dashboard{
-    margin: 0 2px;
+.text-icon-dashboard {
+  margin: 0 2px;
+  margin-bottom: 20px;
+  font-size: 11px;
+  color: white;
+  text-decoration: none;
+  text-align: center;
 }
-.text-icon-cars{
-    margin: 0 20px;
+.text-icon-cars {
+  margin: 0 2px;
+  margin-top: 20px;
+  font-size: 11px;
+  color: white;
+  text-decoration: none;
+  text-align: center;
 }
-.container-fluid{
-    background-color:#F4F5F7; 
-    padding: 0 25px;
+.container-fluid {
+  background-color: #f4f5f7;
+  padding: 0 25px;
 }
